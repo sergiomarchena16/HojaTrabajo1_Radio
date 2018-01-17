@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -59,9 +62,32 @@ public class GUI extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         button2.setText("2");
+        button2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button2MouseClicked(evt);
+            }
+        });
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 50, 30));
 
         button1.setText("1");
+        button1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button1MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                button1MousePressed(evt);
+            }
+        });
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 30));
 
         button3.setText("3");
@@ -134,8 +160,7 @@ public class GUI extends javax.swing.JFrame {
         a = Float.parseFloat(textEstacion.getText());
         float nuevaEstacion = opera.siguiente(a);
         textEstacion.setText(String.valueOf(nuevaEstacion));
-        
-        
+              
         
         
     }//GEN-LAST:event_buttonNextActionPerformed
@@ -145,6 +170,31 @@ public class GUI extends javax.swing.JFrame {
         float nuevaEstacion = opera.anterior(a);
         textEstacion.setText(String.valueOf(nuevaEstacion));
     }//GEN-LAST:event_buttonPrevActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+       
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void button1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MousePressed
+        a = Float.parseFloat(textEstacion.getText());
+        int boton = 2;
+        opera.guardar(a, boton);
+        JOptionPane.showMessageDialog(null, "Se guardo con exito");
+    }//GEN-LAST:event_button1MousePressed
+
+    private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
+        
+    }//GEN-LAST:event_button2MouseClicked
+
+    private void button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MouseClicked
+        
+                
+    }//GEN-LAST:event_button1MouseClicked
+
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        float n = opera.seleccionarFav(2);
+        textEstacion.setText(String.valueOf(n));
+    }//GEN-LAST:event_button2ActionPerformed
 
     /**
      * @param args the command line arguments
