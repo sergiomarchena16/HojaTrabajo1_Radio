@@ -6,7 +6,7 @@
  */
 
 public interface Radio {
-    public void onOff(boolean e);
+    public boolean onOff(boolean e);
     
     public void Switch();
     

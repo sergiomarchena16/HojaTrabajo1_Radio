@@ -9,12 +9,17 @@
  * @author Mafer
  */
 public class GUI extends javax.swing.JFrame {
+    
+    private Operacion opera;
+    private float a; //guardara la estacion en que esta el usuario
 
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
+        opera = new Operacion();
+        a = 0; 
     }
 
     /**
@@ -104,9 +109,19 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().add(buttonFm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 40));
 
         buttonNext.setText("Next");
+        buttonNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNextActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 90, 40));
 
         buttonPrev.setText("Anterior");
+        buttonPrev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPrevActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttonPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 90, 40));
 
         buttonOn.setText("On/Off");
@@ -114,6 +129,22 @@ public class GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNextActionPerformed
+        a = Float.parseFloat(textEstacion.getText());
+        float nuevaEstacion = opera.siguiente(a);
+        textEstacion.setText(String.valueOf(nuevaEstacion));
+        
+        
+        
+        
+    }//GEN-LAST:event_buttonNextActionPerformed
+
+    private void buttonPrevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPrevActionPerformed
+         a = Float.parseFloat(textEstacion.getText());
+        float nuevaEstacion = opera.anterior(a);
+        textEstacion.setText(String.valueOf(nuevaEstacion));
+    }//GEN-LAST:event_buttonPrevActionPerformed
 
     /**
      * @param args the command line arguments
