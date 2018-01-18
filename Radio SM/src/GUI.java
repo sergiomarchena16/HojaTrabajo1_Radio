@@ -34,6 +34,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         button2 = new javax.swing.JButton();
         button1 = new javax.swing.JButton();
@@ -54,8 +55,27 @@ public class GUI extends javax.swing.JFrame {
         buttonNext = new javax.swing.JButton();
         buttonPrev = new javax.swing.JButton();
         buttonOn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        rb1 = new javax.swing.JRadioButton();
+        rb2 = new javax.swing.JRadioButton();
+        rb3 = new javax.swing.JRadioButton();
+        rb4 = new javax.swing.JRadioButton();
+        rb5 = new javax.swing.JRadioButton();
+        rb6 = new javax.swing.JRadioButton();
+        rb7 = new javax.swing.JRadioButton();
+        rb8 = new javax.swing.JRadioButton();
+        rb9 = new javax.swing.JRadioButton();
+        rb10 = new javax.swing.JRadioButton();
+        rb11 = new javax.swing.JRadioButton();
+        rb12 = new javax.swing.JRadioButton();
+        guardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -91,47 +111,113 @@ public class GUI extends javax.swing.JFrame {
         jPanel1.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 30));
 
         button3.setText("3");
+        button3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 50, 30));
 
         button4.setText("4");
+        button4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 50, 30));
 
         button5.setText("5");
+        button5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 50, 30));
 
         button6.setText("6");
+        button6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button6ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 50, 30));
 
         button7.setText("7");
+        button7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button7ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 50, 30));
 
         button8.setText("8");
+        button8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button8ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 50, 30));
 
         button9.setText("9");
+        button9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button9ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 50, 30));
 
         button10.setText("10");
+        button10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button10ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 50, 30));
 
         button11.setText("11");
+        button11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button11ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 50, 30));
 
         button12.setText("12");
+        button12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button12ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 50, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 440, 130));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 440, 130));
 
         textEmisora.setText("FM");
-        getContentPane().add(textEmisora, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 60, 30));
+        textEmisora.setEnabled(false);
+        getContentPane().add(textEmisora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 60, 30));
 
-        textEstacion.setText("jTextField1");
-        getContentPane().add(textEstacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 320, 30));
+        textEstacion.setEnabled(false);
+        textEstacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textEstacionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(textEstacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 320, 30));
 
         buttonAm.setText("AM");
+        buttonAm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAmActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttonAm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 70, 40));
 
         buttonFm.setText("FM");
+        buttonFm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFmActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttonFm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 40));
 
         buttonNext.setText("Next");
@@ -140,7 +226,7 @@ public class GUI extends javax.swing.JFrame {
                 buttonNextActionPerformed(evt);
             }
         });
-        getContentPane().add(buttonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, 90, 40));
+        getContentPane().add(buttonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 90, 40));
 
         buttonPrev.setText("Anterior");
         buttonPrev.addActionListener(new java.awt.event.ActionListener() {
@@ -148,10 +234,76 @@ public class GUI extends javax.swing.JFrame {
                 buttonPrevActionPerformed(evt);
             }
         });
-        getContentPane().add(buttonPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 90, 40));
+        getContentPane().add(buttonPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 90, 40));
 
         buttonOn.setText("On/Off");
-        getContentPane().add(buttonOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, -1, -1));
+        buttonOn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonOnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(buttonOn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 70, 40));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Guardar emisora"));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        buttonGroup1.add(rb1);
+        rb1.setText("1");
+        jPanel2.add(rb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        buttonGroup1.add(rb2);
+        rb2.setText("2");
+        jPanel2.add(rb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+
+        buttonGroup1.add(rb3);
+        rb3.setText("3");
+        jPanel2.add(rb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+
+        buttonGroup1.add(rb4);
+        rb4.setText("4");
+        jPanel2.add(rb4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+
+        buttonGroup1.add(rb5);
+        rb5.setText("5");
+        jPanel2.add(rb5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        buttonGroup1.add(rb6);
+        rb6.setText("6");
+        jPanel2.add(rb6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, -1));
+
+        buttonGroup1.add(rb7);
+        rb7.setText("7");
+        jPanel2.add(rb7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+
+        buttonGroup1.add(rb8);
+        rb8.setText("8");
+        jPanel2.add(rb8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
+        buttonGroup1.add(rb9);
+        rb9.setText("9");
+        jPanel2.add(rb9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
+
+        buttonGroup1.add(rb10);
+        rb10.setText("10");
+        jPanel2.add(rb10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+
+        buttonGroup1.add(rb11);
+        rb11.setText("11");
+        jPanel2.add(rb11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
+
+        buttonGroup1.add(rb12);
+        rb12.setText("12");
+        jPanel2.add(rb12, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, -1));
+
+        guardar.setText("GUARDAR");
+        guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(guardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 270, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,14 +324,16 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonPrevActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-       
+       String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(1)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(13)));
+       }
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MousePressed
-        a = Float.parseFloat(textEstacion.getText());
-        int boton = 2;
-        opera.guardar(a, boton);
-        JOptionPane.showMessageDialog(null, "Se guardo con exito");
+       
     }//GEN-LAST:event_button1MousePressed
 
     private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
@@ -192,9 +346,348 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_button1MouseClicked
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-        float n = opera.seleccionarFav(2);
-        textEstacion.setText(String.valueOf(n));
+     String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(2)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(14)));
+       }
     }//GEN-LAST:event_button2ActionPerformed
+
+    private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
+        // TODO add your handling code here:
+        String emi = textEmisora.getText();
+        a = Float.parseFloat(textEstacion.getText());
+        if (emi.equals("AM")){
+            if(rb1.isSelected()){
+                int boton = 1;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb2.isSelected()){
+                int boton = 2;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito"); 
+            } else if(rb3.isSelected()){
+                int boton = 3;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb4.isSelected()){
+                int boton = 4;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb5.isSelected()){
+                int boton = 5;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb6.isSelected()){
+                int boton = 6;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb7.isSelected()){
+                int boton = 7;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb8.isSelected()){
+                int boton = 8;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb9.isSelected()){
+                int boton = 9;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb10.isSelected()){
+                int boton = 10;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb11.isSelected()){
+                int boton = 12;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            }
+        } else {
+             if(rb1.isSelected()){
+                int boton = 13;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb2.isSelected()){
+                int boton = 14;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb3.isSelected()){
+                int boton = 15;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb4.isSelected()){
+                int boton = 16;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb5.isSelected()){
+                int boton = 17;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb6.isSelected()){
+                int boton = 18;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb7.isSelected()){
+                int boton = 19;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb8.isSelected()){
+                int boton = 20;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb9.isSelected()){
+                int boton = 21;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb10.isSelected()){
+                int boton = 22;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb11.isSelected()){
+                int boton = 23;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            } else if(rb12.isSelected()){
+                int boton = 24;
+                opera.guardar(a, boton);
+                JOptionPane.showMessageDialog(null, "Se guardo con exito");
+            }
+            
+        }
+    }//GEN-LAST:event_guardarActionPerformed
+
+    private void textEstacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textEstacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textEstacionActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        button1.setEnabled(false);
+        button2.setEnabled(false);
+        button3.setEnabled(false);
+        button4.setEnabled(false);
+        button5.setEnabled(false);
+        button6.setEnabled(false);
+        button7.setEnabled(false);
+        button8.setEnabled(false);
+        button9.setEnabled(false);
+        button10.setEnabled(false);
+        button11.setEnabled(false);
+        button12.setEnabled(false);
+        buttonNext.setEnabled(false);
+        buttonPrev.setEnabled(false);
+        buttonAm.setEnabled(false);
+        buttonFm.setEnabled(false);
+        guardar.setEnabled(false);
+        rb1.setEnabled(false);
+        rb2.setEnabled(false);
+        rb3.setEnabled(false);
+        rb4.setEnabled(false);
+        rb5.setEnabled(false);
+        rb6.setEnabled(false);
+        rb7.setEnabled(false);
+        rb8.setEnabled(false);
+        rb9.setEnabled(false);
+        rb10.setEnabled(false);
+        rb11.setEnabled(false);
+        rb12.setEnabled(false);
+        
+        
+    }//GEN-LAST:event_formWindowOpened
+
+    private void buttonOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonOnActionPerformed
+        
+        if(rb1.isEnabled()==false){
+            button1.setEnabled(true);
+            button2.setEnabled(true);
+            button3.setEnabled(true);
+            button4.setEnabled(true);
+            button5.setEnabled(true);
+            button6.setEnabled(true);
+            button7.setEnabled(true);
+            button8.setEnabled(true);
+            button9.setEnabled(true);
+            button10.setEnabled(true);
+            button11.setEnabled(true);
+            button12.setEnabled(true);
+            buttonNext.setEnabled(true);
+            buttonPrev.setEnabled(true);
+            buttonAm.setEnabled(true);
+            buttonFm.setEnabled(true);
+            guardar.setEnabled(true);
+            rb1.setEnabled(true);
+            rb2.setEnabled(true);
+            rb3.setEnabled(true);
+            rb4.setEnabled(true);
+            rb5.setEnabled(true);
+            rb6.setEnabled(true);
+            rb7.setEnabled(true);
+            rb8.setEnabled(true);
+            rb9.setEnabled(true);
+            rb10.setEnabled(true);
+            rb11.setEnabled(true);
+            rb12.setEnabled(true);
+            if(textEmisora.getText().equals("AM")){
+                textEstacion.setText(opera.getAM());
+            } else {
+                textEstacion.setText(opera.getFM());
+            }
+        } else {
+            button1.setEnabled(false);
+            button2.setEnabled(false);
+            button3.setEnabled(false);
+            button4.setEnabled(false);
+            button5.setEnabled(false);
+            button6.setEnabled(false);
+            button7.setEnabled(false);
+            button8.setEnabled(false);
+            button9.setEnabled(false);
+            button10.setEnabled(false);
+            button11.setEnabled(false);
+            button12.setEnabled(false);
+            buttonNext.setEnabled(false);
+            buttonPrev.setEnabled(false);
+            buttonAm.setEnabled(false);
+            buttonFm.setEnabled(false);
+            guardar.setEnabled(false);
+            rb1.setEnabled(false);
+            rb2.setEnabled(false);
+            rb3.setEnabled(false);
+            rb4.setEnabled(false);
+            rb5.setEnabled(false);
+            rb6.setEnabled(false);
+            rb7.setEnabled(false);
+            rb8.setEnabled(false);
+            rb9.setEnabled(false);
+            rb10.setEnabled(false);
+            rb11.setEnabled(false);
+            rb12.setEnabled(false);
+            if(textEmisora.getText().equals("FM")){
+                opera.setFM(textEstacion.getText());
+            } else {
+                opera.setAM(textEstacion.getText());
+            }
+            
+        }
+    }//GEN-LAST:event_buttonOnActionPerformed
+
+    private void buttonAmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAmActionPerformed
+        if(textEmisora.getText().equals("FM")){
+            opera.setFM(textEstacion.getText());
+            textEmisora.setText("AM");
+            textEstacion.setText(opera.getAM());
+        } else {
+            opera.setAM(textEstacion.getText());
+            textEmisora.setText("AM");
+            textEstacion.setText(opera.getAM());
+        }
+        
+        
+    }//GEN-LAST:event_buttonAmActionPerformed
+
+    private void buttonFmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFmActionPerformed
+        if(textEmisora.getText().equals("FM")){
+            opera.setFM(textEstacion.getText());
+            textEmisora.setText("FM");
+            textEstacion.setText(opera.getFM());
+        } else {
+            opera.setAM(textEstacion.getText());
+            textEmisora.setText("FM");
+            textEstacion.setText(opera.getFM());
+        }
+    }//GEN-LAST:event_buttonFmActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(3)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(15)));
+       }
+    }//GEN-LAST:event_button3ActionPerformed
+
+    private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(4)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(16)));
+       }
+    }//GEN-LAST:event_button4ActionPerformed
+
+    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(5)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(17)));
+       }
+    }//GEN-LAST:event_button5ActionPerformed
+
+    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(6)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(18)));
+       }
+    }//GEN-LAST:event_button6ActionPerformed
+
+    private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(7)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(19)));
+       }
+    }//GEN-LAST:event_button7ActionPerformed
+
+    private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(8)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(20)));
+       }
+    }//GEN-LAST:event_button8ActionPerformed
+
+    private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(9)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(21)));
+       }
+    }//GEN-LAST:event_button9ActionPerformed
+
+    private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(10)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(22)));
+       }
+    }//GEN-LAST:event_button10ActionPerformed
+
+    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(11)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(23)));
+       }
+    }//GEN-LAST:event_button11ActionPerformed
+
+    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
+        String emi = textEmisora.getText();
+       if(emi.equals("AM")){
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(12)));
+       } else {
+           textEstacion.setText(String.valueOf(opera.seleccionarFav(24)));
+       }
+    }//GEN-LAST:event_button12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,10 +739,25 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton button9;
     private javax.swing.JButton buttonAm;
     private javax.swing.JButton buttonFm;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton buttonNext;
     private javax.swing.JButton buttonOn;
     private javax.swing.JButton buttonPrev;
+    private javax.swing.JButton guardar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton rb1;
+    private javax.swing.JRadioButton rb10;
+    private javax.swing.JRadioButton rb11;
+    private javax.swing.JRadioButton rb12;
+    private javax.swing.JRadioButton rb2;
+    private javax.swing.JRadioButton rb3;
+    private javax.swing.JRadioButton rb4;
+    private javax.swing.JRadioButton rb5;
+    private javax.swing.JRadioButton rb6;
+    private javax.swing.JRadioButton rb7;
+    private javax.swing.JRadioButton rb8;
+    private javax.swing.JRadioButton rb9;
     private javax.swing.JTextField textEmisora;
     private javax.swing.JTextField textEstacion;
     // End of variables declaration//GEN-END:variables
