@@ -14,11 +14,13 @@ public class Operacion implements Radio{
     private float[][] guardados;
     private String frecuenciaAM; //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en AM 
     private String frecuenciaFM; //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en FM
+    private boolean emisora;
     
     public Operacion(){
         guardados = new float[12][2];
         frecuenciaAM = "530";
         frecuenciaFM = "87.9";
+        emisora = false;
     }
     
     public void setAM(String a){
@@ -29,13 +31,7 @@ public class Operacion implements Radio{
         frecuenciaFM = a;
     }
     
-    public String getAM(){
-        return frecuenciaAM;
-    }
     
-    public String getFM(){
-        return frecuenciaFM;
-    }
     
    
     @Override
@@ -47,7 +43,7 @@ public class Operacion implements Radio{
                 nFrecuencia = a + 10;
             }
         } else {
-            if (a>107.90){
+            if (a==107.90){
             nFrecuencia = (float) 87.9;
             } else if (a<107.90) {
                 
@@ -62,14 +58,14 @@ public class Operacion implements Radio{
     @Override
     public float anterior(float a) {
         if (a%10 == 0){
-            if(a==1610){
-                nFrecuencia = 530;
+            if(a==530){
+                nFrecuencia = 1610;
             }else{
                 nFrecuencia = a - 10;
             }
         } else {
-            if (a>107.90){
-            nFrecuencia = (float) 87.9;
+            if (a==87.9){
+            nFrecuencia = (float) 107.;
             } else if (a>87.9){
                 nFrecuencia = (float) (a - 0.2);
             }
@@ -191,14 +187,21 @@ public class Operacion implements Radio{
     }
 
     @Override
-    public boolean onOff() {
+    public void onOff() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean Switch() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public float Switch() {
+        if(emisora == false ){
+            emisora = true;
+            return Float.valueOf(frecuenciaFM);
+        } else {
+            emisora = false;
+            return Float.valueOf(frecuenciaAM);
+        }
     }
+        
     
     
 }

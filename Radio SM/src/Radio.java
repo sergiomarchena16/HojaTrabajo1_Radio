@@ -5,9 +5,9 @@
  */
 
 public interface Radio {
-    public boolean onOff();
+    public void onOff();
     
-    public boolean Switch();
+    public float Switch();
     
     public float siguiente(float a);
     

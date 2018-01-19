@@ -529,11 +529,7 @@ public class GUI extends javax.swing.JFrame {
             rb10.setEnabled(true);
             rb11.setEnabled(true);
             rb12.setEnabled(true);
-            if(textEmisora.getText().equals("AM")){
-                textEstacion.setText(opera.getAM());
-            } else {
-                textEstacion.setText(opera.getFM());
-            }
+            textEstacion.setText(String.valueOf(opera.Switch()));
         } else {
             button1.setEnabled(false);
             button2.setEnabled(false);
@@ -564,39 +560,21 @@ public class GUI extends javax.swing.JFrame {
             rb10.setEnabled(false);
             rb11.setEnabled(false);
             rb12.setEnabled(false);
-            if(textEmisora.getText().equals("FM")){
-                opera.setFM(textEstacion.getText());
-            } else {
-                opera.setAM(textEstacion.getText());
-            }
+            textEstacion.setText(String.valueOf(opera.Switch()));
             
         }
     }//GEN-LAST:event_buttonOnActionPerformed
 
     private void buttonAmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAmActionPerformed
-        if(textEmisora.getText().equals("FM")){
-            opera.setFM(textEstacion.getText());
-            textEmisora.setText("AM");
-            textEstacion.setText(opera.getAM());
-        } else {
-            opera.setAM(textEstacion.getText());
-            textEmisora.setText("AM");
-            textEstacion.setText(opera.getAM());
-        }
+      textEmisora.setText("AM");
+       textEstacion.setText(String.valueOf(opera.Switch()));
         
         
     }//GEN-LAST:event_buttonAmActionPerformed
 
     private void buttonFmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonFmActionPerformed
-        if(textEmisora.getText().equals("FM")){
-            opera.setFM(textEstacion.getText());
-            textEmisora.setText("FM");
-            textEstacion.setText(opera.getFM());
-        } else {
-            opera.setAM(textEstacion.getText());
-            textEmisora.setText("FM");
-            textEstacion.setText(opera.getFM());
-        }
+       textEmisora.setText("FM");
+       textEstacion.setText(String.valueOf(opera.Switch()));
     }//GEN-LAST:event_buttonFmActionPerformed
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
