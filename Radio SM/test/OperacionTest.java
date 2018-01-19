@@ -18,39 +18,11 @@ public class OperacionTest {
     public OperacionTest() {
     }
     
-    @BeforeClass
-    public static void setUpClass() {
-    }
     
-    @AfterClass
-    public static void tearDownClass() {
-    }
 
-    /**
-     * Test of setAM method, of class Operacion.
-     */
-    @Test
-    public void testSetAM() {
-        System.out.println("setAM");
-        String a = "";
-        Operacion instance = new Operacion();
-        instance.setAM(a);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
-    /**
-     * Test of setFM method, of class Operacion.
-     */
-    @Test
-    public void testSetFM() {
-        System.out.println("setFM");
-        String a = "";
-        Operacion instance = new Operacion();
-        instance.setFM(a);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
 
     /**
      * Test of siguiente method, of class Operacion.
@@ -88,12 +60,11 @@ public class OperacionTest {
     @Test
     public void testGuardar() {
         System.out.println("guardar");
-        float e = 0.0F;
+        float e = 530;
         int b = 0;
         Operacion instance = new Operacion();
-        instance.guardar(e, b);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.guardar(530, 9);
+        
     }
 
     /**

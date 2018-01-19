@@ -36,42 +36,52 @@ public class Operacion implements Radio{
    
     @Override
     public float siguiente(float a) {
+        DecimalFormat df = new DecimalFormat("#.0");
         if (a%10 == 0){
             if(a==1610){
                 nFrecuencia = 530;
+                frecuenciaAM = String.valueOf(nFrecuencia);
             }else{
                 nFrecuencia = a + 10;
+                frecuenciaAM = String.valueOf(nFrecuencia);
             }
         } else {
             if (a==107.90){
             nFrecuencia = (float) 87.9;
+            frecuenciaFM = String.valueOf(df.format(nFrecuencia));
             } else if (a<107.90) {
                 
                 nFrecuencia = (float) (a + 0.2);
+                frecuenciaFM = String.valueOf(df.format(nFrecuencia));
             }
             
         }
-        DecimalFormat df = new DecimalFormat("#.0");
+        
         return Float.parseFloat(df.format(nFrecuencia));
     }
 
     @Override
     public float anterior(float a) {
+        DecimalFormat df = new DecimalFormat("#.0");
         if (a%10 == 0){
             if(a==530){
                 nFrecuencia = 1610;
+                frecuenciaAM = String.valueOf(nFrecuencia);
             }else{
                 nFrecuencia = a - 10;
+                frecuenciaAM = String.valueOf(nFrecuencia);
             }
         } else {
             if (a==87.9){
             nFrecuencia = (float) 107.;
+            frecuenciaFM = String.valueOf(df.format(nFrecuencia));
             } else if (a>87.9){
                 nFrecuencia = (float) (a - 0.2);
+                frecuenciaFM = String.valueOf(df.format(nFrecuencia));
             }
             
         }
-        DecimalFormat df = new DecimalFormat("#.0");
+        
         return Float.parseFloat(df.format(nFrecuencia));
         
     }
