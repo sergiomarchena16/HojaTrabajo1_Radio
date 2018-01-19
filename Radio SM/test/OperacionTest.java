@@ -41,12 +41,20 @@ public class OperacionTest {
     @Test
     public void testSiguiente() {
         System.out.println("siguiente");
-        float a = 540;
+        float a = (float) 540;
         Operacion instance = new Operacion();
-        float expResult = 550F;
+        float expResult = 550;
         float result = instance.siguiente(a);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
+       if (expResult != result) {
+        fail("The test case is a prototype.");
+       }
+       a = (float) 94.9;
+       expResult = (float) 95.1;
+       result = instance.siguiente(a);
+       assertEquals(expResult, result, 0.0);
+       // TODO review the generated test code and remove the default call to fail.
        if (expResult != result) {
         fail("The test case is a prototype.");
        }
@@ -62,6 +70,14 @@ public class OperacionTest {
         Operacion instance = new Operacion();
         float expResult = (float) 94.7;
         float result = instance.anterior(a);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        if (expResult != result) {
+        fail("The test case is a prototype.");
+       }
+        a = 630;
+        expResult = (float) 620;
+        result = instance.anterior(a);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         if (expResult != result) {
