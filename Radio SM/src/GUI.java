@@ -21,7 +21,7 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
-        opera = new Operacion();
+        opera = new Operacion() {};
         a = 0; 
     }
 
@@ -324,12 +324,9 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonPrevActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-       String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+       
            textEstacion.setText(String.valueOf(opera.seleccionarFav(1)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(13)));
-       }
+       
     }//GEN-LAST:event_button1ActionPerformed
 
     private void button1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MousePressed
@@ -346,12 +343,9 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_button1MouseClicked
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
-     String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+     
            textEstacion.setText(String.valueOf(opera.seleccionarFav(2)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(14)));
-       }
+       
     }//GEN-LAST:event_button2ActionPerformed
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
@@ -406,51 +400,51 @@ public class GUI extends javax.swing.JFrame {
             }
         } else {
              if(rb1.isSelected()){
-                int boton = 13;
+                int boton = 1;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb2.isSelected()){
-                int boton = 14;
+                int boton = 2;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb3.isSelected()){
-                int boton = 15;
+                int boton = 3;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb4.isSelected()){
-                int boton = 16;
+                int boton = 4;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb5.isSelected()){
-                int boton = 17;
+                int boton = 5;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb6.isSelected()){
-                int boton = 18;
+                int boton = 6;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb7.isSelected()){
-                int boton = 19;
+                int boton = 7;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb8.isSelected()){
-                int boton = 20;
+                int boton = 8;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb9.isSelected()){
-                int boton = 21;
+                int boton = 9;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb10.isSelected()){
-                int boton = 22;
+                int boton = 10;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb11.isSelected()){
-                int boton = 23;
+                int boton = 11;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             } else if(rb12.isSelected()){
-                int boton = 24;
+                int boton = 12;
                 opera.guardar(a, boton);
                 JOptionPane.showMessageDialog(null, "Se guardo con exito");
             }
@@ -529,7 +523,8 @@ public class GUI extends javax.swing.JFrame {
             rb10.setEnabled(true);
             rb11.setEnabled(true);
             rb12.setEnabled(true);
-            textEstacion.setText(String.valueOf(opera.Switch()));
+            textEstacion.setText("87.9");
+            textEmisora.setText("FM");
         } else {
             button1.setEnabled(false);
             button2.setEnabled(false);
@@ -560,7 +555,7 @@ public class GUI extends javax.swing.JFrame {
             rb10.setEnabled(false);
             rb11.setEnabled(false);
             rb12.setEnabled(false);
-            textEstacion.setText(String.valueOf(opera.Switch()));
+            
             
         }
     }//GEN-LAST:event_buttonOnActionPerformed
@@ -579,92 +574,68 @@ public class GUI extends javax.swing.JFrame {
 
     private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
         String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+       
            textEstacion.setText(String.valueOf(opera.seleccionarFav(3)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(15)));
-       }
+       
+           
+       
     }//GEN-LAST:event_button3ActionPerformed
 
     private void button4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button4ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+       
            textEstacion.setText(String.valueOf(opera.seleccionarFav(4)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(16)));
-       }
+       
+           
+       
     }//GEN-LAST:event_button4ActionPerformed
 
     private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(5)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(17)));
-       }
+       
+        
     }//GEN-LAST:event_button5ActionPerformed
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(6)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(18)));
-       }
+       
     }//GEN-LAST:event_button6ActionPerformed
 
     private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(7)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(19)));
-       }
+       
     }//GEN-LAST:event_button7ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(8)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(20)));
-       }
+      
     }//GEN-LAST:event_button8ActionPerformed
 
     private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(9)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(21)));
-       }
+      
     }//GEN-LAST:event_button9ActionPerformed
 
     private void button10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+        
            textEstacion.setText(String.valueOf(opera.seleccionarFav(10)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(22)));
-       }
+       
     }//GEN-LAST:event_button10ActionPerformed
 
     private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+       
            textEstacion.setText(String.valueOf(opera.seleccionarFav(11)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(23)));
-       }
+       
     }//GEN-LAST:event_button11ActionPerformed
 
     private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
-        String emi = textEmisora.getText();
-       if(emi.equals("AM")){
+       
            textEstacion.setText(String.valueOf(opera.seleccionarFav(12)));
-       } else {
-           textEstacion.setText(String.valueOf(opera.seleccionarFav(24)));
-       }
+      
     }//GEN-LAST:event_button12ActionPerformed
 
     /**

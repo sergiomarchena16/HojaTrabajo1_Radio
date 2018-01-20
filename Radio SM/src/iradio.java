@@ -4,7 +4,7 @@
  * @since 15/01/2018 
  */
 
-public interface Radio {
+public interface iradio {
     public void onOff();
     
     public float Switch();
