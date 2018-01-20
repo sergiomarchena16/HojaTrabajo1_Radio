@@ -1,21 +1,35 @@
+/*
+Esta clase es la encargada de las operaciones/metodos.
+Aqui se haran todos los procesos para cada uno de los metodos en la clase Radio.
+*/
 
 import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 
-
-
 /**
  * @author Maria Fernanda Lopez 17160
- * @version 16/01/2018
+ * @author Sergio Marchena 16387
+ * @since 16/01/2018
  */
 public class Operacion implements Radio{
-    //Atributos 
-    private float nFrecuencia; //tendra el valor de la frecuencia que toca despues de la que esta actualmente en la radio
+    /**
+     * Atributos necesario de la clase Operacion.
+    */
+    
+    //Tendra el valor de la frecuencia que toca despues de la que esta actualmente en la radio
+    private float nFrecuencia; 
+    // Arreglo que tendra espacios para guardar estaciones.
     private float[][] guardados;
-    private String frecuenciaAM; //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en AM 
-    private String frecuenciaFM; //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en FM
+    //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en AM 
+    private String frecuenciaAM; 
+    //tendra guardado el valor de la ultima frecuencia que sintonizo el usuario en FM
+    private String frecuenciaFM; 
+    // Variable para determinar entre AM y FM con true y false.
     private boolean emisora;
     
+    /**
+     * Constructor de la clase Operacion.
+     */
     public Operacion(){
         guardados = new float[12][2];
         frecuenciaAM = "530";
@@ -23,20 +37,30 @@ public class Operacion implements Radio{
         emisora = false;
     }
     
+    /**
+     * Metodo set para la estacion AM.
+     * @param a 
+     */
     public void setAM(String a){
         frecuenciaAM = a;
     }
     
+    /**
+     * Metodo set para la estacion FM.
+     * @param a 
+     */
     public void setFM(String a){
         frecuenciaFM = a;
     }
     
-    
-    
-   
     @Override
+    /**
+     * Metodo para cambiar a la estacion siguiente.
+     * 
+     */
     public float siguiente(float a) {
         DecimalFormat df = new DecimalFormat("#.0");
+        // Si esta en AM
         if (a%10 == 0){
             if(a==1610){
                 nFrecuencia = 530;
@@ -45,7 +69,9 @@ public class Operacion implements Radio{
                 nFrecuencia = a + 10;
                 frecuenciaAM = String.valueOf(nFrecuencia);
             }
-        } else {
+        } 
+        // si esta en FM
+        else {
             if (a==107.90){
             nFrecuencia = (float) 87.9;
             frecuenciaFM = String.valueOf(df.format(nFrecuencia));
@@ -53,16 +79,18 @@ public class Operacion implements Radio{
                 
                 nFrecuencia = (float) (a + 0.2);
                 frecuenciaFM = String.valueOf(df.format(nFrecuencia));
-            }
-            
+            }   
         }
-        
         return Float.parseFloat(df.format(nFrecuencia));
     }
 
     @Override
+    /**
+     * Metodo para regresar a la estacion anterior.
+     */
     public float anterior(float a) {
         DecimalFormat df = new DecimalFormat("#.0");
+        // si esta en AM
         if (a%10 == 0){
             if(a==530){
                 nFrecuencia = 1610;
@@ -71,22 +99,24 @@ public class Operacion implements Radio{
                 nFrecuencia = a - 10;
                 frecuenciaAM = String.valueOf(nFrecuencia);
             }
-        } else {
+        }
+        // si eta en FM
+        else {
             if (a==87.9){
             nFrecuencia = (float) 107.;
             frecuenciaFM = String.valueOf(df.format(nFrecuencia));
             } else if (a>87.9){
                 nFrecuencia = (float) (a - 0.2);
                 frecuenciaFM = String.valueOf(df.format(nFrecuencia));
-            }
-            
+            }   
         }
-        
         return Float.parseFloat(df.format(nFrecuencia));
-        
     }
 
     @Override
+    /**
+     * Metodo para guardar como favorito una estacion.
+     */
     public void guardar(float e, int b) {
         if (b==1){
             guardados[0][0] = e;
@@ -140,9 +170,11 @@ public class Operacion implements Radio{
     }
 
     @Override
+    /**
+     * Metodo para seleccionar una estacion favorita ya guardada como favorita.
+     */
     public float seleccionarFav(int b) {
         float estacion = 0 ;
-        
       if (b==1){
             estacion = guardados[0][0];
         } else if (b==2){
@@ -192,16 +224,21 @@ public class Operacion implements Radio{
         } else if (b==24){
            estacion = guardados[0][1];
         }
-        
         return estacion;
     }
 
     @Override
+    /**
+     * Metodo para encender o apagar la radio.
+     */
     public void onOff() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
+    /** 
+     * Metodo para cambiar entre AM y FM.
+     */
     public float Switch() {
         if(emisora == false ){
             emisora = true;
@@ -211,7 +248,5 @@ public class Operacion implements Radio{
             return Float.valueOf(frecuenciaAM);
         }
     }
-        
-    
     
 }
